@@ -34,11 +34,12 @@ Before you begin, make sure you have the following installed:
 ### 2. Install Backend Dependencies
  ```bash
  cd server
+ npm install
  npm start
 ```
 
 ### 3. Setup Environment Variables
-Create a .env file in the backend folder and add the following variables:
+Create a .env file in the server folder and add the following variables:
 
  ```bash
  MONGO_URI=your_mongo_database_url
@@ -58,6 +59,8 @@ npm start
 Run the frontend (React.js)
   
 ```bash
+cd client
+npm install
 npm start
 ```
 The app should now be running on http://localhost:3000.
@@ -67,31 +70,3 @@ The app should now be running on http://localhost:3000.
 2. **Start a Chat:** Click on any user from the contact list to start a conversation.
 3. **Send a Message:** Type your message and hit send to deliver in real-time.
 4. **Audio/Video Call:** Click on the audio/video call buttons to initiate a call.
-
-## Screenshots
-Here are some screenshots of the app:
-
-### 1. Login Screen
-![Screenshot 2025-01-13 222546](https://github.com/user-attachments/assets/cde14627-2828-4edd-a8d4-194bb1f94477)
-
-### 2. Chat Screen
-![Screenshot 2025-01-13 210612](https://github.com/user-attachments/assets/0c56665a-160e-4df3-bda3-f7e667d45eb6)
-
-### 3. Audio/Video Call Screen
-![Screenshot 2025-01-13 210650](https://github.com/user-attachments/assets/ebf0f86d-7a15-4605-9d20-ba6bb355ab8d)
-
-![Screenshot 2025-01-13 210428](https://github.com/user-attachments/assets/2bcc2708-1088-4623-be51-86d8eeb0f33a)
-
-### 4. Call History
-![Screenshot 2025-01-13 210838](https://github.com/user-attachments/assets/bf51e7b2-5faa-4638-9e7c-7e3c1509c7df)
-
-![Screenshot 2025-01-13 210759](https://github.com/user-attachments/assets/12f2316b-ca9e-4458-8b4a-f785ea3b91b1)
-
-### 5. Mobile View
-
-![Screenshot 2025-01-13 223740](https://github.com/user-attachments/assets/f015be45-febc-4752-b773-2fb1c3994bd1)
-
-![Screenshot 2025-01-13 223818](https://github.com/user-attachments/assets/ea7e5515-4828-4dd0-93ac-8673c52295bf)
-
-![Screenshot 2025-01-13 223839](https://github.com/user-attachments/assets/bc1ed290-ab2a-4a85-a446-1aeefb48e79d)
-

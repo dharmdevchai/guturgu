@@ -129,7 +129,7 @@ const ChatContext = ({ children }) => {
         setChatId(chat.chat ? chat.chat._id : null);
         setMessages(chat.messages || []);
       } catch (err) {
-        notifyError('Error fetching chats message:' + err)
+        //notifyError('Error fetching chats message:' + err)
         console.log(err)
         setMessages([]);
       }
