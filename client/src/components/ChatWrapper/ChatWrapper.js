@@ -33,7 +33,9 @@ const ChatWrapper = () => {
 
   // states
   const [isProfileVisible, setIsProfileVisible] = useState(false);
-  const { selectedChatUserId, selectedUser } = useChat();
+  //const { selectedChatUserId, selectedUser } = useChat();
+  const { selectedChatUserId } = useChat();
+
 
   // ref
   const profileWrapperRef = useRef(null);

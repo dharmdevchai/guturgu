@@ -73,13 +73,16 @@ const ChatContext = ({ children }) => {
           `${BACKEND_IP}/users/chatlists/chat-list/${user.userId}`
         );
         const data = await response.json();
+        
 
         setIsChatListLoading(false);
         setChatList(data.userDetails);
         setTotalUnseenMsgCount(data.totalUnseenCount);
       } catch (err) {
+      
+        console.log(`${BACKEND_IP}/users/chatlists/chat-list/${user.userId}`);
         notifyError("Error fetching chats list:" + err);
-        console.log(err)
+       
         setIsChatListLoading(false);
       }
     }

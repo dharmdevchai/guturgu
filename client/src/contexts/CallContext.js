@@ -20,7 +20,8 @@ const context = createContext(null);
 const CallContext = ({ children }) => {
   const { user } = useAuth();
   const { socket, selectedChatUserId } = useChat();
-  const { notifySuccess, notifyError, notifyWarning } = useToast();
+  //const { notifySuccess, notifyError, notifyWarning } = useToast();
+  const { notifySuccess, notifyError } = useToast();
   const { fetchCallHistory } = useCallLogs();
 
   // State variables
