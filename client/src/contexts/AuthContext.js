@@ -151,7 +151,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        "http://localhost7:5000/users/auth/register",
+        BACKEND_IP+"users/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

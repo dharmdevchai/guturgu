@@ -3,9 +3,10 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const User = require('../../Models/user');
+const { getUrl } = require('../helpers/url'); 
 
 const router = express.Router();
-const BASE_URL = process.env.BASE_URL || 'http://localhost:5000/profiles';
+const BASE_URL = process.env.BASE_URL+"/profile" || 'http://localhost:5000/profiles';
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
