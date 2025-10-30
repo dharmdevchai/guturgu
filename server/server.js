@@ -71,12 +71,23 @@ const io = new Server(server, {
 });
 
 const activeCalls = new Map();
+
+// for development
+/*
 const peerServer = ExpressPeerServer(server, {
   debug: true,
   host: "localhost",
   port: "5000",
   path: "/",
 });
+*/
+
+//for production
+const peerServer = ExpressPeerServer(server, {
+  debug: true,
+  path: "/",
+});
+
 
 app.use("/peerjs", peerServer);
 
@@ -85,7 +96,18 @@ mongoose
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+//for development
+/*
+
 const BASE_URL = "http://localhost:5000/chat";
+
+*/
+//for production
+
+const BASE_URL =
+  process.env.BASE_URL || "https://guturgu-f74k.onrender.com";
+
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -331,6 +353,16 @@ async function updateUserList(userId, peerId, lastMessage) {
   }
 }
 
+//for Development
+/*
+
 server.listen(5000, () => {
   console.log("Server listening on port 5000");
+});
+*/
+//for production
+
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
