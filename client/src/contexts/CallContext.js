@@ -121,6 +121,7 @@ const CallContext = ({ children }) => {
 
       socket.on("call-accepted", () => {
         setIsRinging(false);
+        startCallDuration(true)
         fetchCallHistory();
       });
 
@@ -175,6 +176,7 @@ const CallContext = ({ children }) => {
         peerStream.current = remoteStream;
         setIsCallActive(true);
         setIsCalling(true);
+        startCallDuration(true);
         setCallNotAnswered(false);
       });
 
